@@ -1,0 +1,27 @@
+[package]
+name = "config-rs-ng"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jacques Murray <jacquesmmurray@gmail.com>"]
+description = "A next-generation configuration library for Rust"
+license = "MIT"
+repository = "https://github.com/Jacques-Murray/config-rs-ng"
+
+[dependencies]
+# Core utilities
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+log = "0.4"
+validator = { version = "0.18", features = ["derive"] }
+
+# File formats
+toml = "0.8"
+serde_yaml = "0.9"
+
+[dev-dependencies]
+# For the example
+tokio = { version = "1.0", features = ["full"] }
+
+# For testing
+once_cell = "1.19"
