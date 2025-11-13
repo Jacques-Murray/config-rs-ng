@@ -24,7 +24,7 @@ pub enum Error {
     Source(String),
 
     #[error("Failed to determine file format for: {0}")]
-    UnknownFileFormat9(String),
+    UnknownFileFormat(String),
 
     #[error("Environment variable error: {0}")]
     EnvVar(#[from] std::env::VarError),
